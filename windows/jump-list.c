@@ -440,7 +440,7 @@ static IShellLink *make_shell_link(const char *appname,
     sfree(param_string);
 
     if (sessionname) {
-        desc_string = dupcat("Connect to PuTTY session '", sessionname, "'");
+        desc_string = dupcat("连接到 PuTTY 会话 '", sessionname, "'");
     } else {
         assert(appname);
         desc_string = dupprintf("Run %.*s",
@@ -579,7 +579,7 @@ static void update_jumplist_from_registry(void)
                        collection, COMPTR(IObjectArray, &array))))
         goto cleanup;
 
-    pCDL->lpVtbl->AppendCategory(pCDL, L"Recent Sessions", array);
+    pCDL->lpVtbl->AppendCategory(pCDL, L"最近会话", array);
 
     /*
      * Create an object collection to form the 'Tasks' category on the
